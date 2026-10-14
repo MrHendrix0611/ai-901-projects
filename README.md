@@ -68,30 +68,13 @@ ai901-senai-projetos/
 │   └── 03-qmax-assistente-qa/
 ├── docs/
 │   ├── arquitetura.md
-│   ├── mockups/               # imagens ilustrativas
-│   └── evidencias/             # pasta para capturas reais, sem segredos
+│   ├── mockups/               
+│   └── evidencias/             
 ├── scripts/check_secrets.py
 ├── tests/
 ├── SECURITY.md
 ├── .gitignore
 └── README.md
-```
-
-## Publicação
-
-Nome sugerido do repositório: **`ai901-senai-projetos`**.
-
-```powershell
-git init
-git add .
-python scripts/check_secrets.py
-git status
-git diff --cached --stat
-git commit -m "docs: publica projetos do curso AI-901 com exemplos seguros"
-git branch -M main
-# Crie um repositório vazio no GitHub e substitua SEU_USUARIO abaixo:
-git remote add origin https://github.com/SEU_USUARIO/ai901-senai-projetos.git
-git push -u origin main
 ```
 
 **Segurança:** leia [`SECURITY.md`](SECURITY.md). Os arquivos originais continham chaves reais, por isso é necessário **revogar/rotacionar essas chaves no Azure**; o novo repositório não contém essas credenciais.

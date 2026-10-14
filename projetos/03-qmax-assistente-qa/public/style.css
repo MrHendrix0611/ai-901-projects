@@ -1,0 +1,92 @@
+#cabecalho{
+    background-color: slateblue;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    display: flex;
+}
+
+#cabecalho>h2{
+    color: snow;
+    padding-left: 50px;
+    font-size: 26pt;
+}
+
+.container{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#conteudo_principal{
+    height: calc(100vh - 143px - 79px);
+}
+
+#conteudo_principal>form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#conversa{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; 
+}
+
+#footer_pergunta{
+    background-color: gainsboro;
+    width: 100%;
+    height: 79px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    padding: 1%;
+    gap: 1%;
+}
+#footer_pergunta>button,
+.div_card_conversa>button{
+    background-color: transparent;
+    border: none;
+}
+
+#footer_pergunta>textarea{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    font-size: 16pt;
+}
+
+.div_card_conversa{
+    display: flex;
+    align-items: flex-start;
+}
+
+.div_card_conversa>p{
+    border-radius: 7px;
+    width: 100%;
+    max-width: 468px;
+    min-height: 71px;
+    padding: 1%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    line-height: 2.5rem;
+    word-spacing: 0.2rem;
+}
+
+.div_card_conversa_chat{
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.div_card_conversa_usuario{
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+.div_card_conversa_chat>p{
+    background-color: #2222;
+}

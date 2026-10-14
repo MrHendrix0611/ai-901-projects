@@ -1,0 +1,42 @@
+# Segredos e configurações locais
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.pfx
+*.key
+credentials.json
+secrets.json
+**/local.settings.json
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+
+# JS
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dados de usuários e arquivos gerados
+**/uploads/**
+!**/uploads/.gitkeep
+**/tmp/**
+*.log
+*.sqlite
+*.db
+
+# Pacotes ZIP locais / dados brutos do curso
+*.zip
+**/downloads/

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QMax</title>
+</head>
+<body>
+    <header id="cabecalho" class="container">
+        <img src="bot.png" style="max-width: 100px; max-height: 100px;">
+        <h2>QMax - Assistente Virtual de Qualidade de Software</h2>
+    </header>
+    <main id="conteudo_principal" class="container">
+        <form action="">
+            <div id="conversa">
+                <p id="demoBanner" style="display:none; padding:8px; color:#92400e; background:#fffbeb; border:1px solid #fcd34d; border-radius:6px;">DEMONSTRAÇÃO LOCAL — respostas pré-definidas, sem modelo Azure.</p>
+
+            </div>
+            <footer id="footer_pergunta">
+                <textarea name="" id="pergunta" placeholder="Faça uma pergunta"></textarea>
+                <button type="submit">
+                    <img src="enviar.png" style="max-width: 50px; max-height: 50px;" alt="">
+                </button>                
+            </footer>
+        </form>
+        <div id="div_resultados_ocr" style="margin-top: 20px; text-align: center; display: none;"></div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

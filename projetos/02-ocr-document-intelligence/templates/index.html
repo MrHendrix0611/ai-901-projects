@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR De Imagens</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>OCR de Imagens</h1>
+        <p>Extraia informações de imagens usando Recurso Azure AI Document Intelligence</p>
+    </header>
+    
+    <main>
+        {% if demo_mode %}<p style="color:#92400e;background:#fffbeb;padding:0.75rem;border:1px solid #facc15;border-radius:6px;margin-bottom:1rem;">DEMONSTRAÇÃO LOCAL — a análise retorna dados ilustrativos, não resultados reais do Azure.</p>{% endif %}
+        <section class="upload-area" id="uploadArea">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="drop-zone" id="dropZone">
+                    <input type="file" id="imageInput" name="image" accept=".png,.jpg,.jpeg,.bmp,.tiff" hidden>
+                    <p>Arraste uma imagem aqui ou clique para selecionar</p>
+                    <p class="file-name" id="fileName"></p>
+                    <img id="preview" class="preview-img" src="" alt="Prévia">
+                </div>
+                <button type="submit" id="analyzeBtn">Analisar imagem</button>
+            </form>
+            <div id="loading" style="display:none;">Analisando imagem...</div>
+            <div id="error" class="error-message" style="display:none;"></div>
+        </section>
+        
+        <div id="demoNotice" role="status" style="display:none; margin-top:1rem; padding:0.75rem; background:#fff4d6; border:1px solid #b45309; border-radius:6px;">Modo demonstração: texto ilustrativo, sem OCR real. Para usar o Azure, configure APP_MODE=azure.</div>
+        <section class="results" id="results" style="display:none;">
+            <div class="results-grid">
+                <div class="image-panel">
+                    <h2>Imagem Original</h2>
+                    <img id="resultImage" src="" alt="Imagem analisada">
+                </div>
+                <br>
+                <div class="info-panel">
+                    <h2>Informações Extraídas</h2>
+                    <div id="contentArea"></div>
+                    <div id="pagesArea"></div>
+                    <div id="linesArea"></div>
+                    <div id="wordsArea"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

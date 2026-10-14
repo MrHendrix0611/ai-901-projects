@@ -1,0 +1,38 @@
+name: Revisão automatizada
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verificar padrões de credenciais
+        run: python scripts/check_secrets.py
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar dependências Python
+        run: |
+          python -m pip install -r projetos/01-ecopredictor/requirements.txt
+          python -m pip install -r projetos/02-ocr-document-intelligence/requirements.txt
+      - name: Executar testes Python
+        run: python -m unittest discover -s tests -v
+  qmax-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projetos/03-qmax-assistente-qa
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npm test

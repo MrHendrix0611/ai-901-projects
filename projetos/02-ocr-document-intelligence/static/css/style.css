@@ -1,0 +1,25 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #ffffff; color: #000000; line-height: 1.6; }
+header { background-color: #000000; color: #ffffff; padding: 3rem 1rem; text-align: center; }
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+header p { font-size: 1.1rem; opacity: 0.9; }
+main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+.upload-area { background: #f8f8f8; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.drop-zone { border: 2px dashed #cccccc; border-radius: 8px; padding: 2rem; text-align: center; transition: all 0.3s; cursor: pointer; }
+.drop-zone:hover, .drop-zone.dragover { border-color: #666666; background: #f0f0f0; }
+.drop-zone p { color: #666666; margin-bottom: 0.5rem; }
+.drop-zone img { margin-top: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+button { background: #000000; color: #ffffff; border: none; padding: 0.8rem 2rem; border-radius: 6px; font-size: 1rem; cursor: pointer; margin-top: 1rem; transition: background 0.2s; }
+button:hover { background: #333333; }
+button:disabled { background: #cccccc; color: #666666; cursor: not-allowed; }
+.results { background: #ffffff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-top: 2rem; }
+.results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+@media (max-width: 900px) { .results-grid { grid-template-columns: 1fr; } }
+.image-panel img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.info-panel h2 { margin-bottom: 1rem; color: #000000; }
+.info-panel h3 { margin: 1rem 0 0.5rem; font-size: 1.1rem; color: #333333; }
+.line-item, .word-item { background: #f8f8f8; padding: 0.75rem; border-radius: 6px; margin-bottom: 0.5rem; }
+.confidence { color: #000000; font-weight: bold; }
+.error-message { color: #000000; font-weight: bold; background: #eeeeee; padding: 0.75rem; border-radius: 6px; margin-top: 1rem; }
+.preview-img { display: none; max-width: 300px; max-height: 300px; margin-top: 1rem; border: 1px solid #cccccc; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.loading-text { display: none; color: #000000; font-weight: 500; margin-top: 1rem; }
